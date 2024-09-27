@@ -32,17 +32,17 @@ const Media = Schema({
         type:Schema.Types.ObjectId,
         ref:'Genero',
     },
-    director:{
+    directora:{
         type: Schema.Types.ObjectId,
-        ref: 'Director'
+        ref: 'Directora'
     },
     productora:{
         type: Schema.Types.ObjectId,
         ref: 'Productora'
     },
-    tipo: {
+    tipoMultimedia: {
         type: Schema.Types.ObjectId,
-        ref: 'Tipo'
+        ref: 'TipoMultimedia'
     }
 })
 

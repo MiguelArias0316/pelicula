@@ -1,6 +1,6 @@
 const {Schema, model} = require ('mongoose')
 
-const Tipo = Schema({
+const TipoMultimedia = Schema({
     nombre:{
         type: String,
         unique: [true,'Este nombre ya existe']
@@ -16,4 +16,4 @@ const Tipo = Schema({
     }
 })
 
-module.exports = model('Tipo', Tipo)
+module.exports = model('TipoMultimedia', TipoMultimedia)
