@@ -20,10 +20,11 @@ const Media = Schema({
     },
     fecha_creacion:{
         type: Date,
-        default: new Date()
+        default: Date.now
     },
     fecha_actualizacion:{
         type: Date,
+        default: Date.now
     },
     fecha_estreno:{
         type: Date,
@@ -32,9 +33,9 @@ const Media = Schema({
         type:Schema.Types.ObjectId,
         ref:'Genero',
     },
-    directora:{
+    Director:{
         type: Schema.Types.ObjectId,
-        ref: 'Directora'
+        ref: 'Director'
     },
     productora:{
         type: Schema.Types.ObjectId,

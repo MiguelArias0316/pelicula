@@ -1,6 +1,7 @@
 const  {Schema, model} = require ('mongoose')
 
-const Directora = Schema({
+const Director = Schema({
+
     nombre:{
         type: String
     },
@@ -8,11 +9,13 @@ const Directora = Schema({
         type: Boolean
     },
     fecha_creacion:{
-        type: Date
+        type: Date,
+        default: Date.now
     },
     fecha_actualizacion:{
-        type: Date
+        type: Date,
+        default: Date.now
     }
 })
 
-module.exports = model('Directora', Directora)
+module.exports = model('Director', Director)

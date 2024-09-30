@@ -1,4 +1,5 @@
 const {request, response} = require('express')
+
 const TipoMultimedia = require('../models/tipoMultimedia')
 
 const crearTipoMultimedia = async (req=request, res= response) => {
@@ -11,8 +12,9 @@ const crearTipoMultimedia = async (req=request, res= response) => {
             descripcion
         }
         const tipoMultimedia = new TipoMultimedia(data)
-        await tipoMultimedia.save()
 
+        await tipoMultimedia.save()
+        return res.status(201).json(tipoMultimedia)
     }catch(e){
         console.log(e)
         res.status(500).json({

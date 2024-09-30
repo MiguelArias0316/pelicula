@@ -1,7 +1,7 @@
 const {Schema,model} = require ('mongoose')
 
 const Productora = Schema({
-    
+
     nombre:{
         type: String
     },
@@ -9,10 +9,12 @@ const Productora = Schema({
         type: Boolean
     },
     fecha_creacion:{
-        type: Date
+        type: Date,
+        default: Date.now
     },
     fecha_actualizacion:{
-        type: Date
+        type: Date,
+        default: Date.now
     },
     slogan:{
         type: String

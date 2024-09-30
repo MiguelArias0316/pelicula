@@ -6,10 +6,12 @@ const TipoMultimedia = Schema({
         unique: [true,'Este nombre ya existe']
     },
     fecha_creacion:{
-        type: Date
+        type: Date,
+        default: Date.now
     },
     fecha_actualizacion:{
-        type: Date
+        type: Date,
+        default: Date.now
     },
     descripcion:{
         type: String

@@ -12,10 +12,11 @@ const Genero = Schema ({
     },
     fecha_creacion:{
         type: Date,
-        default: new Date()
+        default: Date.now
     },
     fecha_actualizacion:{
         type: String,
+        default: Date.now
     },
     descripcion:{
         type: String,

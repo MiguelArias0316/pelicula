@@ -14,13 +14,13 @@ app.use(cors({
 }))
 
 const generos = require('./routes/generoRouter')
-const directoras = require('./routes/directoraRouter')
+const directores = require('./routes/directorRouter')
 const media = require('./routes/mediaRouter')
 const productoras = require('./routes/productoraRouter')
 const tiposMultimedia = require('./routes/tipoMultimediaRouter')
 
 app.use('/api/v1/generos', generos)
-app.use('/api/v1/directoras', directoras)
+app.use('/api/v1/directores', directores)
 app.use('/api/v1/media', media)
 app.use('/api/v1/productoras', productoras)
 app.use('/api/v1/tiposMultimedia', tiposMultimedia)

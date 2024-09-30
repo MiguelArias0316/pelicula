@@ -31,36 +31,20 @@ try{
 }catch(e){
     console.log(e)
     return res.status(500).json({
-        msj:e
+        msj: e
     })
 }}
-
-/* const consultarGeneroPorId = async (req = request, res = response) => {
-    try{
-        const id = await Genero.findById(id)
-        
-        return res.json(genero)
-
-    }catch(e){
-        console.log(e)
-        return res.status(500).json({
-            msj: e
-        })
-    }
-
-} */
 
 const editarGeneroPorId = async (req = request, res = response) => {
     try{
         const {nombre, descripcion} = req.body
-
+        const id = req.params.id
         let data = {
             nombre,
             descripcion 
         }
         data.fecha_actualizacion = new Date() 
-        const genero = new Genero(data)
-        await genero.save()
+        const genero = await Genero.findByIdAndUpdate(id,data,{new: true})
     
         return res.status(201).json(genero)
     }catch(e){

@@ -1,19 +1,19 @@
 const {request, response} = require('express')
 
-const Directora = require('../models/directora')
+const Director = require('../models/director')
 
 const crearDirector = async (req = request , res= response) => {
     try{
-        const nombre = req.body
+        const {nombre} = req.body
 
-        let data ={
+        let data = {
             nombre
         }
-        const directora = new Directora(data)
+        const director = new Director(data)
     
-        await directora.save()
+        await director.save()
     
-        return res.status(201).json(directora)
+        return res.status(201).json(director)
     }catch(e){
         console.log(e)
         return res.status(500).json({
@@ -24,7 +24,7 @@ const crearDirector = async (req = request , res= response) => {
 }
 const consultarDirectores = async (req = request, res= response) =>{
     try{
-        const directores = await Directora.find()
+        const directores = await Director.find()
     
         return res.json(directores)
     }catch(e){
@@ -37,18 +37,16 @@ const consultarDirectores = async (req = request, res= response) =>{
 
 const editarDirectorPorId = async (req = request, res= response) =>{
     try{
-        const nombre = req.body
-
+        const {nombre} = req.body
+        const id = req.params.id
         let data ={
             nombre
         }
         data.fecha_actualizacion = new Date()
 
-        const directora = new Directora(data)
+        const director = await Director.findByIdAndUpdate(id,data,{new:true})
     
-        await directora.save()
-    
-        return res.status(201).json(directora)
+        return res.status(201).json(director)
     }catch(e){
         console.log(e)
         return res.status(500).json({

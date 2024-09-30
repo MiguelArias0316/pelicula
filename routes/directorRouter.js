@@ -1,10 +1,10 @@
 const {Router} = require ('express')
-const {crearDirector,consultarDirectores,editarDirectorPorId} = require ('../controllers/directoraController')
+const {crearDirector,consultarDirectores,editarDirectorPorId} = require ('../controllers/directorController')
 
 const router = Router()
 
 router.post('/', crearDirector)
 router.get('/', consultarDirectores)
-router.put('/', editarDirectorPorId)
+router.put('/:id', editarDirectorPorId)
 
 module.exports = router

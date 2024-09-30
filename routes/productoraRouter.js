@@ -5,6 +5,6 @@ const router = Router()
 
 router.post('/', crearProductora)
 router.get('/', consultarProductoras)
-router.put('/', editarProdcutoraporId)
+router.put('/:id', editarProdcutoraporId)
 
 module.exports = router

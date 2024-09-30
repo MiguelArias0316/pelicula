@@ -5,6 +5,6 @@ const router = Router()
 
 router.post('/', crearGenero)
 router.get('/', consultarGeneros)
-router.put('/', editarGeneroPorId)
+router.put('/:id', editarGeneroPorId)
 
 module.exports = router
