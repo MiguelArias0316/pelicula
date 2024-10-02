@@ -1,5 +1,5 @@
 {
-  "name": "peliculas-api-rest",
+  "name": "peliculas-back",
   "version": "1.0.0",
   "description": "api rest peliculas",
   "main": "server.js",

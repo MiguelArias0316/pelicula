@@ -95,7 +95,6 @@ try{
 
 const eliminarMediaPorId = async (req=request, res=response) =>{
     try{
-
         const id = req.params.id
         const media = await Media.findByIdAndDelete(id)
       return res.status(201).json(media)
