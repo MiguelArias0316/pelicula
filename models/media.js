@@ -8,6 +8,10 @@ const Media = Schema({
     titulo:{
         type: String
     },
+    estado:{
+        type: Boolean,
+        default: true
+    },
     sinopsis:{
         type:String
     },

@@ -6,7 +6,8 @@ const Productora = Schema({
         type: String
     },
     estado:{
-        type: Boolean
+        type: Boolean,
+        default: true
     },
     fecha_creacion:{
         type: Date,
