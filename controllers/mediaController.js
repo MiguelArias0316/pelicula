@@ -66,6 +66,7 @@ try{
         director,
         productora,
         tipoMultimedia,
+        estado
     } = req.body
 
     data = {
@@ -78,7 +79,8 @@ try{
         genero,
         director,
         productora,
-        tipoMultimedia
+        tipoMultimedia,
+        estado
     }
     const id = req.params.id
 

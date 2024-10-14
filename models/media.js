@@ -37,7 +37,7 @@ const Media = Schema({
         type:Schema.Types.ObjectId,
         ref:'Genero',
     },
-    Director:{
+    director:{
         type: Schema.Types.ObjectId,
         ref: 'Director'
     },

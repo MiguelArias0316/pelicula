@@ -37,10 +37,11 @@ const consultarDirectores = async (req = request, res= response) =>{
 
 const editarDirectorPorId = async (req = request, res= response) =>{
     try{
-        const {nombre} = req.body
+        const {nombre, estado} = req.body
         const id = req.params.id
         let data ={
-            nombre
+            nombre,
+            estado
         }
         data.fecha_actualizacion = new Date()
 

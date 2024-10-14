@@ -37,11 +37,12 @@ try{
 
 const editarGeneroPorId = async (req = request, res = response) => {
     try{
-        const {nombre, descripcion} = req.body
+        const {nombre, descripcion, estado} = req.body
         const id = req.params.id
         let data = {
             nombre,
-            descripcion 
+            descripcion,
+            estado
         }
         data.fecha_actualizacion = new Date() 
         const genero = await Genero.findByIdAndUpdate(id,data,{new: true})
